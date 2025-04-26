@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>File Management System</h1>
+
+    <div id="auth-section">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="otp-section" style="display: none;">
+      <input type="text" id="otp" placeholder="Enter OTP">
+      <button onclick="verifyOtp()">Verify OTP</button>
+    </div>
+
+    <div id="main-section" style="display:none;">
+      <select id="scheduler">
+        <option value="fcfs">First Come First Serve</option>
+        <option value="sjf">Shortest Job First</option>
+        <option value="priority">Priority Scheduling</option>
+        <option value="rr">Round Robin</option>
+      </select>
+
+      <input type="file" id="file-input" multiple>
+      <button onclick="uploadFiles()">Upload Files</button>
+
+      <h3>Uploaded Files</h3>
+      <div id="file-list"></div>
+    </div>
+
+    <!-- Dark Mode Toggle Button -->
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
